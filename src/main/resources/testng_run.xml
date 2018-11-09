@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Hub Spot Test Automation Suite" parallel="tests">
 
-	<test name="Hub Spot Regression Test Cases on firefox">
-	<parameter name="browser" value="firefox" />
-		<classes>
-			<class name="com.qa.hubspot.testcases.LoginTest"></class>
-			<class name="com.qa.hubspot.testcases.HomePageTest"></class>
-		</classes>
-	</test>
+<suite name="Hub Spot Test Automation Suite">
+
+	<listeners>
+		<listener class-name="com.hubspot.qa.ExtentReporterListner.ExtentReporterNG" />
+	</listeners>
+
+	<!-- <test name="Hub Spot Regression Test Cases on firefox"> <parameter 
+		name="browser" value="firefox" /> <classes> <class name="com.qa.hubspot.testcases.LoginTest"></class> 
+		<class name="com.qa.hubspot.testcases.HomePageTest"></class> </classes> </test> -->
 
 	<test name="Hub Spot Regression Test Cases on chrome">
-	<parameter name="browser" value="chrome" />
+		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.qa.hubspot.testcases.LoginTest"></class>
-			<class name="com.qa.hubspot.testcases.HomePageTest"></class>
+			<class name="com.qa.hubspot.testcases.LoginTest"></class> <class 
+				name="com.qa.hubspot.testcases.HomePageTest"></class>
+<!-- 			<class name="com.qa.hubspot.testcases.ContactsPageTest"></class>
+ -->
 		</classes>
 	</test>
 
